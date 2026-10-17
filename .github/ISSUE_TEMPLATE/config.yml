@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and questions
+    url: https://github.com/sunmeat/pull-shark/blob/main/SUPPORT.md
+    about: Read the support guide before opening a general question.
+  - name: Security vulnerability
+    url: https://github.com/sunmeat/pull-shark/security/advisories/new
+    about: Report security issues privately instead of posting public details.
