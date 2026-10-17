@@ -1,0 +1,33 @@
+name: Feature follow-up
+description: Propose a focused follow-up to an existing feature or accepted proposal
+title: "[Feature follow-up]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: related
+    attributes:
+      label: Related issue or pull request
+      description: Link the original proposal or implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Remaining gap
+      description: What is still missing or could be improved?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+      description: Describe the practical benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and trade-offs
+      description: Keep the follow-up focused and explain any maintenance cost.
+    validations:
+      required: false
