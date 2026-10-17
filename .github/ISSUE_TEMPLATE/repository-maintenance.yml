@@ -1,0 +1,31 @@
+name: Repository maintenance
+description: Report stale configuration, missing metadata, or a maintenance task
+title: "[Maintenance]: "
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Maintenance area
+      options:
+        - Repository metadata
+        - GitHub configuration
+        - Automation
+        - Documentation structure
+        - Dependency maintenance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain what needs attention and why.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact if not addressed
+      description: Note any user-facing or maintenance consequences.
+    validations:
+      required: false
