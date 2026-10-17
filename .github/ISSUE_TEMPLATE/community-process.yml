@@ -1,0 +1,38 @@
+name: Community process feedback
+description: Suggest an improvement to participation, moderation, or contributor experience
+title: "[Community process]: "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - First-time contributions
+        - Issue triage
+        - Pull request review
+        - Community guidelines
+        - Communication and support
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Current experience
+      description: Describe the process and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Suggest a practical change.
+    validations:
+      required: true
+  - type: textarea
+    id: considerations
+    attributes:
+      label: Additional considerations
+      description: Note any accessibility, moderation, or maintenance implications.
+    validations:
+      required: false
