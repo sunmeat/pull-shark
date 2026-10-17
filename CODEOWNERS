@@ -1,0 +1,12 @@
+# Default reviewer for repository changes.
+* @sunmeat
+
+# Keep project governance and contributor guidance under maintainer review.
+/*.md @sunmeat
+/GOVERNANCE.md @sunmeat
+/CONTRIBUTING.md @sunmeat
+/CODE_OF_CONDUCT.md @sunmeat
+/SECURITY.md @sunmeat
+
+# Review automation and repository configuration carefully.
+/.github/ @sunmeat
