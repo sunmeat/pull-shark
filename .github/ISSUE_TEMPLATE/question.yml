@@ -1,0 +1,31 @@
+name: Question
+description: Ask a focused question about the repository or its workflow
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the README and SUPPORT guide first. Please keep the question specific and avoid sharing private information or credentials.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like clarified?
+      placeholder: Describe your question clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include relevant steps, links, or examples.
+      placeholder: What have you already checked?
+    validations:
+      required: false
+  - type: textarea
+    id: expected-answer
+    attributes:
+      label: What would help?
+      description: What information or outcome are you looking for?
+    validations:
+      required: false
