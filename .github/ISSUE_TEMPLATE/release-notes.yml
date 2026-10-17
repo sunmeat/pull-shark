@@ -1,0 +1,25 @@
+name: Release notes feedback
+description: Suggest a correction or improvement to release notes or changelog entries
+title: "[Release notes]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release or changelog section
+      description: Provide the version, date, or link.
+    validations:
+      required: true
+  - type: textarea
+    id: concern
+    attributes:
+      label: What needs attention?
+      description: Describe an omission, unclear entry, or factual issue.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording or missing information
+    validations:
+      required: false
