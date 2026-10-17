@@ -1,0 +1,33 @@
+name: Feature request
+description: Suggest a focused improvement to this repository
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe one improvement that would make this repository more useful or easier to maintain.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What is difficult, missing, or worth improving?
+      placeholder: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Explain what you would like to change.
+      placeholder: A focused proposal.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Mention alternatives or trade-offs.
+      placeholder: Optional alternatives or additional context.
+    validations:
+      required: false
