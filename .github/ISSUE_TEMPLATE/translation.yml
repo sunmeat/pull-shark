@@ -1,0 +1,32 @@
+name: Translation or terminology
+description: Report unclear wording, inconsistent terminology, or a translation concern
+title: "[Language]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: Where does the wording appear?
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current wording
+      description: Quote the relevant text or explain the terminology concern.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording
+      description: Provide a clearer alternative, if you have one.
+    validations:
+      required: false
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: English
+    validations:
+      required: false
