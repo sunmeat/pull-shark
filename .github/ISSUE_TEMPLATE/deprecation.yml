@@ -1,0 +1,31 @@
+name: Deprecation or removal notice
+description: Flag guidance that may need a clear deprecation or removal notice
+title: "[Deprecation]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page, file, or workflow
+    validations:
+      required: true
+  - type: textarea
+    id: item
+    attributes:
+      label: What may be deprecated?
+      description: Identify the instruction, process, or configuration.
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason and evidence
+      description: Explain why the item may be outdated or no longer recommended.
+    validations:
+      required: true
+  - type: textarea
+    id: migration
+    attributes:
+      label: Suggested replacement or migration path
+    validations:
+      required: false
