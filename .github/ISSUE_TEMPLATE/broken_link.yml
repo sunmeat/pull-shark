@@ -1,0 +1,33 @@
+name: Broken link
+description: Report a broken, redirected, or incorrect repository link
+title: "[Broken link]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or file containing the link
+      placeholder: "README.md"
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link that does not work
+      placeholder: "https://example.com/resource"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happens when you follow it?
+      description: Include the error or unexpected destination.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Provide the correct destination if known.
+    validations:
+      required: false
