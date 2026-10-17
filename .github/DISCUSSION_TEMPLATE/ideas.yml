@@ -1,0 +1,26 @@
+title: "Idea or proposal"
+body:
+  - type: markdown
+    attributes:
+      value: "Share a constructive idea that fits the repository's scope."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What would benefit from improvement?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed idea
+      description: Describe the change and who it helps.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs
+      description: Consider complexity and maintenance cost.
+    validations:
+      required: false
