@@ -1,0 +1,33 @@
+name: Outdated reference
+description: Report a link or external reference that is no longer current
+title: "[Outdated reference]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Repository page
+      description: Where is the reference used?
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Outdated reference
+      description: Link to the external page or resource.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Why is it outdated?
+      description: Explain what changed or why the reference is no longer reliable.
+    validations:
+      required: true
+  - type: textarea
+    id: replacement
+    attributes:
+      label: Replacement reference
+      description: Provide a better source if known.
+    validations:
+      required: false
