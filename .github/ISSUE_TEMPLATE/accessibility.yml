@@ -1,0 +1,37 @@
+name: Accessibility concern
+description: Report an accessibility barrier in repository content or workflows
+title: "[Accessibility]: "
+labels: ["accessibility"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use this form to describe an accessibility barrier in the repository's documentation or contribution workflow."
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Barrier
+      description: What is difficult or impossible to use?
+      placeholder: Describe the barrier clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Link the page, file, or workflow where it occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected accessible experience
+      description: What would make this easier to access or understand?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Assistive technology, browser, or other relevant details.
+    validations:
+      required: false
