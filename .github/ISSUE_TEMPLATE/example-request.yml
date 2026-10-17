@@ -1,0 +1,31 @@
+name: Practical example request
+description: Request a concrete example for an existing guideline or workflow
+title: "[Example request]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic or guideline
+      description: Link to the relevant page if possible.
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: Describe the task you would like an example to cover.
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Preferred example format
+      options:
+        - Step-by-step instructions
+        - Sample file
+        - Before and after
+        - Short checklist
+        - Any clear format
+    validations:
+      required: true
