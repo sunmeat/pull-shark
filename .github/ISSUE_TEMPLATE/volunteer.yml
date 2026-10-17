@@ -1,0 +1,35 @@
+name: Volunteer to help
+description: Offer help with a documented task or repository improvement
+title: "[Volunteer]: "
+body:
+  - type: input
+    id: task
+    attributes:
+      label: Issue or task
+      description: Link the issue or describe the task you would like to help with.
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Proposed contribution
+      description: Briefly explain how you would approach the task.
+    validations:
+      required: true
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Familiarity with this type of task
+      options:
+        - New to this type of contribution
+        - Some experience
+        - Comfortable working independently
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before starting
+      options:
+        - label: I understand that maintainers may discuss scope before work begins.
+          required: true
