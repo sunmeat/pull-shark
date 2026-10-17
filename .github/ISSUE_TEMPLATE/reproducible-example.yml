@@ -1,0 +1,37 @@
+name: Reproducible example
+description: Report an issue with a minimal example that maintainers can verify
+title: "[Reproduction]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the behavior you are trying to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. Open ...\n2. Follow ...\n3. Observe ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Remove credentials, tokens, personal data, and other secrets before sharing.
+    validations:
+      required: false
