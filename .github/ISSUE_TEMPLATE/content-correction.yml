@@ -1,0 +1,32 @@
+name: Content correction
+description: Suggest a factual correction or clarify outdated repository guidance
+title: "[Content correction]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: Link to the relevant file or section.
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What needs correction?
+      description: Explain what is inaccurate, incomplete, or outdated.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link to authoritative documentation or other reliable sources.
+    validations:
+      required: false
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed correction
+      description: Suggest replacement wording when possible.
+    validations:
+      required: false
