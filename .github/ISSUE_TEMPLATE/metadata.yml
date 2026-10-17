@@ -1,0 +1,30 @@
+name: Repository metadata
+description: Report missing or incorrect repository metadata
+title: "[Metadata]: "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: field
+    attributes:
+      label: Metadata area
+      options:
+        - Repository description
+        - Topics
+        - License information
+        - Citation metadata
+        - Links and website
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is missing or incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+    validations:
+      required: false
