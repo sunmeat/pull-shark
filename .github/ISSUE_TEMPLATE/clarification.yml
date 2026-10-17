@@ -1,0 +1,31 @@
+name: Clarification request
+description: Ask for an existing instruction or policy to be explained more clearly
+title: "[Clarification]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Relevant page or section
+    validations:
+      required: true
+  - type: textarea
+    id: unclear
+    attributes:
+      label: What is unclear?
+      description: Quote the sentence or describe the instruction.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: What did you expect it to mean?
+      description: Explain what you tried to understand or do.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested wording
+    validations:
+      required: false
