@@ -1,0 +1,42 @@
+name: Check Markdown encoding
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+      - '**.markdown'
+  push:
+    branches: [main]
+    paths:
+      - '**.md'
+      - '**.markdown'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  encoding:
+    name: Validate Markdown UTF-8 encoding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode Markdown files as UTF-8
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import sys
+
+          files = [*Path(".").rglob("*.md"), *Path(".").rglob("*.markdown")]
+          files = [p for p in files if ".git" not in p.parts]
+          errors = []
+          for path in files:
+              try:
+                  path.read_text(encoding="utf-8")
+              except UnicodeDecodeError as error:
+                  errors.append(f"{path}: {error}")
+          if errors:
+              print("\n".join(errors))
+              sys.exit(1)
+          print(f"All {len(files)} Markdown files are valid UTF-8.")
+          PY
