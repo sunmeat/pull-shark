@@ -1,0 +1,32 @@
+name: Workflow improvement
+description: Suggest a change to contribution or maintenance workflows
+title: "[Workflow improvement]: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the friction or repeated manual work.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Explain the workflow change you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs and risks
+      description: Consider maintenance cost, permissions, and false positives.
+    validations:
+      required: false
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This proposal fits the repository's documented project scope.
+          required: true
