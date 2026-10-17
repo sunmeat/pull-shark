@@ -1,0 +1,38 @@
+name: Check community files
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  community-files:
+    name: Check repository essentials
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify expected files exist
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          required = [
+              "README.md",
+              "LICENSE",
+              "CODE_OF_CONDUCT.md",
+              "CONTRIBUTING.md",
+              "SECURITY.md",
+              "ACCESSIBILITY.md",
+              "CITATION.cff",
+              "SUPPORT.md",
+          ]
+          missing = [name for name in required if not Path(name).is_file()]
+          if missing:
+              print("Missing required community files:")
+              print("\n".join(f"- {name}" for name in missing))
+              raise SystemExit(1)
+          print(f"All {len(required)} expected community files are present.")
+          PY
