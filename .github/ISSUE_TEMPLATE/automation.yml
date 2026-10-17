@@ -1,0 +1,32 @@
+name: Automation or workflow issue
+description: Report a problem with repository automation or GitHub Actions
+title: "[Automation]: "
+labels: ["automation"]
+body:
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow or automation
+      description: Name or path of the workflow, if known
+    validations:
+      required: true
+  - type: input
+    id: run
+    attributes:
+      label: Failed run URL
+      description: Link to the GitHub Actions run, if available
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Observed result
+      description: Include relevant error messages, but never include secrets or tokens.
+    validations:
+      required: true
