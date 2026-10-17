@@ -1,0 +1,25 @@
+name: Typo report
+description: Report a spelling, punctuation, or grammar mistake
+title: "[Typo]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: Link to the page or identify the file and section.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: Quote the exact text that needs correction.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+    validations:
+      required: true
