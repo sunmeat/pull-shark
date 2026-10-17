@@ -1,0 +1,31 @@
+name: Duplicate or conflicting content
+description: Report guidance repeated in multiple places or conflicting between pages
+title: "[Duplicate content]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: first
+    attributes:
+      label: First page or file
+    validations:
+      required: true
+  - type: input
+    id: second
+    attributes:
+      label: Other page or file
+    validations:
+      required: true
+  - type: textarea
+    id: conflict
+    attributes:
+      label: What is duplicated or inconsistent?
+      description: Explain the overlap or conflict.
+    validations:
+      required: true
+  - type: textarea
+    id: preferred
+    attributes:
+      label: Suggested source of truth
+      description: Which page should be canonical, if you have a recommendation?
+    validations:
+      required: false
