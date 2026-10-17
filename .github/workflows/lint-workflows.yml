@@ -1,0 +1,39 @@
+name: Lint GitHub Actions workflows
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  actionlint:
+    name: Lint changed workflows
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: rhysd/actionlint@v1
+      - name: Check changed workflow files
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            files="$(git diff --name-only --diff-filter=ACMRT "origin/${{ github.base_ref }}...HEAD" -- '.github/workflows/*.yml' '.github/workflows/*.yaml')"
+          elif git rev-parse HEAD^ >/dev/null 2>&1; then
+            files="$(git diff --name-only --diff-filter=ACMRT HEAD^ HEAD -- '.github/workflows/*.yml' '.github/workflows/*.yaml')"
+          else
+            files="$(git ls-files '.github/workflows/*.yml' '.github/workflows/*.yaml')"
+          fi
+          if [[ -n "$files" ]]; then
+            printf '%s\n' "$files" | xargs actionlint
+          else
+            echo "No workflow files changed."
+          fi
