@@ -1,0 +1,26 @@
+name: Documentation navigation
+description: Suggest an improvement to finding information in the repository
+title: "[Navigation]: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What were you trying to find?
+      description: Describe the information or task you came for.
+    validations:
+      required: true
+  - type: textarea
+    id: difficulty
+    attributes:
+      label: Where did navigation become difficult?
+      description: Include the pages or links you tried.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Suggest a link, index entry, or information architecture change.
+    validations:
+      required: false
