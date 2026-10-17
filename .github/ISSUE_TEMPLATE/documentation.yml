@@ -1,0 +1,37 @@
+name: Documentation improvement
+description: Report unclear, missing, or outdated documentation
+title: "[Docs]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for documentation issues. For a proposed fix, include a concrete suggestion when possible.
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: Link to the page or name the file that needs attention.
+      placeholder: README.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+      description: Explain the problem and its impact on readers.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: Share wording, examples, or a possible solution.
+    validations:
+      required: false
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Additional context
+      description: Add relevant links or examples, without private information.
+    validations:
+      required: false
