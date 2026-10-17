@@ -1,0 +1,26 @@
+title: "Show and tell"
+body:
+  - type: markdown
+    attributes:
+      value: "Share a useful example, contribution, or learning related to this repository. Do not post secrets or personal data."
+  - type: input
+    id: name
+    attributes:
+      label: What are you sharing?
+      description: Give your example a short title.
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: Explain what it demonstrates and why it may help others.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Relevant link
+      description: Optional link to a public example or documentation.
+    validations:
+      required: false
