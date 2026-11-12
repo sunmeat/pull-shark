@@ -20,7 +20,7 @@ jobs:
     name: Validate Markdown UTF-8 encoding
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Decode Markdown files as UTF-8
         run: |
           python - <<'PY'
